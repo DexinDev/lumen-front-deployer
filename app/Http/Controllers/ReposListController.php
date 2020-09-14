@@ -2,16 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Helpers\DeployedDirsHelper;
 use Laravel\Lumen\Routing\Controller as BaseController;
 
 class ReposListController extends BaseController
 {
-    private function getDirs()
-    {
-        $dirs = glob(app()->path() . '/../../reps/*', GLOB_ONLYDIR);
-        return $dirs;
-    }
-
     private function getBranches()
     {
         $masterPath = app()->path() . '/../../reps/master/';
@@ -21,12 +16,8 @@ class ReposListController extends BaseController
 
     private function modifyData()
     {
-        $dirs = $this->getDirs();
         $branches = $this->getBranches();
-        $modData = ["dirs" => [], "branches" => []];
-        foreach ($dirs as $dir) {
-            $modData["dirs"][] = mb_strtolower(basename($dir));
-        }
+        $modData = ["dirs" => DeployedDirsHelper::getDirs(), "branches" => []];
         foreach ($branches as $branch) {
             $branch = basename($branch);
             if (!in_array(mb_strtolower($branch), $modData["dirs"])) {
