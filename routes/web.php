@@ -14,3 +14,4 @@
 $router->get('/', ['uses' => 'ReposListController@viewLists', "as" => "index"]);
 $router->get('/deploy/{branch}', ['uses' => 'DeployController@deploy', "as" => "deploy"]);
 $router->get('/delete/{branch}', ['uses' => 'BranchDeleteController@delete', "as" => "delete"]);
+$router->get('/hook/update', ['uses' => 'HookController@updateHook', "as" => "hookupdate"]);
