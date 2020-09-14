@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e591d631a74f6227cce1912236707274",
+    "content-hash": "4be8fced66fbffeff2568a82e343bfc0",
     "packages": [
         {
             "name": "brick/math",
@@ -51,48 +51,6 @@
                 "math"
             ],
             "time": "2020-08-18T23:57:15+00:00"
-        },
-        {
-            "name": "czproject/git-php",
-            "version": "v3.18.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/czproject/git-php.git",
-                "reference": "db664a8d5a1fbfd33e1cdd6ae65bc411bd18dc73"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/czproject/git-php/zipball/db664a8d5a1fbfd33e1cdd6ae65bc411bd18dc73",
-                "reference": "db664a8d5a1fbfd33e1cdd6ae65bc411bd18dc73",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.4.0"
-            },
-            "require-dev": {
-                "nette/tester": "^1.1"
-            },
-            "type": "library",
-            "autoload": {
-                "classmap": [
-                    "src/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Jan Pecha",
-                    "email": "janpecha@email.cz"
-                }
-            ],
-            "description": "Library for work with Git repository in PHP.",
-            "keywords": [
-                "git"
-            ],
-            "time": "2020-07-03T08:02:12+00:00"
         },
         {
             "name": "doctrine/inflector",
