@@ -8,6 +8,6 @@ use Laravel\Lumen\Routing\Controller as BaseController;
 class HookController extends BaseController
 {
     public function updateHook(){
-        dd(request());
+        Log::debug("catch request", request()->all());
     }
 }
