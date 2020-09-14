@@ -18,7 +18,7 @@
         <tbody>
         @foreach($dirs as $dir)
             <tr>
-                <th style="width: 350px">{{ basename($dir) }}</th>
+                <th style="width: 350px"><a href="http://{{ basename($dir) }}.megamarkup.scaph.ru" target="_blank">{{ basename($dir) }}</a></th>
                 <td>
                     @if(basename($dir) != 'master')
                         <a href="/delete/{{$dir}}" class="call" onclick="return confirm('Confirm action')">Delete</a>
