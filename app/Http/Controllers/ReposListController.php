@@ -10,7 +10,6 @@ class ReposListController extends BaseController
     {
         $dirs = glob(app()->path() . '/../../reps/*', GLOB_ONLYDIR);
         return $dirs;
-        return view('index', ["dirs" => $dirs]);
     }
 
     private function getBranches()
@@ -26,11 +25,11 @@ class ReposListController extends BaseController
         $branches = $this->getBranches();
         $modData = ["dirs" => [], "branches" => []];
         foreach ($dirs as $dir) {
-            $modData["dirs"][] = basename($dir);
+            $modData["dirs"][] = mb_strtolower(basename($dir));
         }
         foreach ($branches as $branch) {
             $branch = basename($branch);
-            if (!in_array($branch, $modData["dirs"])) {
+            if (!in_array(mb_strtolower($branch), $modData["dirs"])) {
                 $modData["branches"][] = $branch;
             }
         }

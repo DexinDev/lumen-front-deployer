@@ -1,7 +1,8 @@
 #!/bin/bash
 BASEDIR=$(dirname $0)
+DIRREPNAME=${1,,}
 cd "${BASEDIR}/../reps/"
-cp -r master $1
+cp -r master ${DIRREPNAME}
 echo "copy done"
 cd $1
 git checkout $1
