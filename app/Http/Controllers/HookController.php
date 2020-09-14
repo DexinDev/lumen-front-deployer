@@ -8,6 +8,8 @@ use Laravel\Lumen\Routing\Controller as BaseController;
 class HookController extends BaseController
 {
     public function updateHook(){
-        Log::debug("catch request", request()->json());
+        Log::debug("REQUEST TYPE" . request()->json()->event_name);
+        Log::debug("REQUEST REF" . basename(request()->json()->ref));
+//        Log::debug("catch request", request()->json());
     }
 }
